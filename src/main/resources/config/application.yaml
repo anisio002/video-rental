@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/pagila
+    username: postgres
+    password: akcolt7
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimumIdle: 10
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImproveNamingStrategy
+    properties:
+      hibernate:
+        default_schema: public
+        dialect: org.hibernate.dialect.PostgreSQLDialect 
