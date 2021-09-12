@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class FilmCategoryId {
-
+	//test
 	private Film film;
 	private Category category;
 }
