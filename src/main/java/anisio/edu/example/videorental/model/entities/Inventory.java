@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +25,7 @@ public class Inventory {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int inventoryId;
 	@ManyToOne
+	@JoinColumn(name = "film_id", nullable = false)
 	private Film film;
 	@ManyToOne
 	private Store store;

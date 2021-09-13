@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,8 +26,10 @@ public class Payment {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int paymentId;
 	@ManyToOne
+	@JoinColumn(name = "customer_id", nullable = false)
 	private Customer customer;
 	@ManyToOne
+	@JoinColumn(name = "staff_id", nullable = false)
 	private Staff staff;
 	@OneToOne
 	private Rental rental;

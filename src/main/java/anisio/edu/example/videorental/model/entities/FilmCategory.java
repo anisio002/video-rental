@@ -19,6 +19,7 @@ public class FilmCategory {
 	
 	@EmbeddedId
 	private FilmCategoryId filmCategoryId;
+	
 	private LocalDate lastUpdate;
 
 }

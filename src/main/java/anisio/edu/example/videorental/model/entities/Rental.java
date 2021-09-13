@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,6 +32,7 @@ public class Rental {
 	private Customer customer;
 	private LocalDate returnDate;
 	@ManyToOne
+	@JoinColumn(name = "staff_id", nullable = false)
 	private Staff staff;
 	private LocalDate lastUpdate;
 	
